@@ -11,8 +11,8 @@
 ## 05-09 第二次课任务
 
 - [x] 6. 用 LaTeX + AI 工具编写个人 CV，编译为 PDF（见 `./tasks/session-2/CV_王景宏.tex`）
-- [ ] 7. fork 机器学习课程仓库（Gitee 或 GitHub）
-- [ ] 8. 将 CV PDF 提交到 fork 仓库的 `session-2/CV_in_latex/` 目录，命名为 `CV_{姓名}.pdf`
-- [ ] 9. 发送仓库 URL 到微信群
+- [x] 7. fork 机器学习课程仓库（Gitee 或 GitHub）
+- [x] 8. 将 CV PDF 提交到 fork 仓库的 `session-2/CV_in_latex/` 目录，命名为 `CV_{姓名}.pdf`
+- [x] 9. 发送仓库 URL 到微信群
 - [x] 10.（可选）改进 `session-2/CV_in_latex` 教程，提交 PR
 - [x] 11.（可选）本地构建 + Docker 容器构建
