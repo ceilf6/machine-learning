@@ -160,7 +160,10 @@ def extract_json(text: str) -> dict | None:
 
 
 def evaluate_plan(plan: dict | None) -> dict:
-    """评估计划的完整性"""
+    """评估计划的完整性，兼容两种格式:
+    - 嵌套格式: { phases: [{ name, steps: [...] }] }
+    - 扁平格式: { stepOutlines: [{ description, action, phase }] }
+    """
     if plan is None:
         return {
             "json_valid": False,
@@ -172,34 +175,53 @@ def evaluate_plan(plan: dict | None) -> dict:
             "steps_count": 0,
         }
 
+    # 嵌套格式: phases[].steps[]
     phases = plan.get("phases", [])
-    has_phases = isinstance(phases, list) and len(phases) > 0
+    # 扁平格式: stepOutlines[]
+    step_outlines = plan.get("stepOutlines", [])
 
-    steps_count = 0
-    has_steps = False
-    if has_phases:
+    if isinstance(phases, list) and len(phases) > 0:
+        # 嵌套格式
+        steps_count = 0
         for phase in phases:
             if isinstance(phase, dict):
                 steps = phase.get("steps", [])
                 if isinstance(steps, list):
                     steps_count += len(steps)
-        has_steps = steps_count > 0
-
-    risks = plan.get("risks", [])
-    has_risks = isinstance(risks, list) and len(risks) > 0
-
-    alternatives = plan.get("alternatives", [])
-    has_alternatives = isinstance(alternatives, list) and len(alternatives) > 0
-
-    return {
-        "json_valid": True,
-        "has_phases": has_phases,
-        "has_steps": has_steps,
-        "has_risks": has_risks,
-        "has_alternatives": has_alternatives,
-        "phases_count": len(phases) if has_phases else 0,
-        "steps_count": steps_count,
-    }
+        return {
+            "json_valid": True,
+            "has_phases": True,
+            "has_steps": steps_count > 0,
+            "has_risks": isinstance(plan.get("risks"), list) and len(plan.get("risks", [])) > 0,
+            "has_alternatives": isinstance(plan.get("alternatives"), list) and len(plan.get("alternatives", [])) > 0,
+            "phases_count": len(phases),
+            "steps_count": steps_count,
+        }
+    elif isinstance(step_outlines, list) and len(step_outlines) > 0:
+        # 扁平格式: 从 steps 的 phase 字段统计阶段数
+        phase_names = set()
+        for step in step_outlines:
+            if isinstance(step, dict) and "phase" in step:
+                phase_names.add(step["phase"])
+        return {
+            "json_valid": True,
+            "has_phases": len(phase_names) > 0,
+            "has_steps": True,
+            "has_risks": isinstance(plan.get("risks"), list) and len(plan.get("risks", [])) > 0,
+            "has_alternatives": isinstance(plan.get("alternatives"), list) and len(plan.get("alternatives", [])) > 0,
+            "phases_count": len(phase_names),
+            "steps_count": len(step_outlines),
+        }
+    else:
+        return {
+            "json_valid": True,
+            "has_phases": False,
+            "has_steps": False,
+            "has_risks": isinstance(plan.get("risks"), list) and len(plan.get("risks", [])) > 0,
+            "has_alternatives": isinstance(plan.get("alternatives"), list) and len(plan.get("alternatives", [])) > 0,
+            "phases_count": 0,
+            "steps_count": 0,
+        }
 
 
 def main():

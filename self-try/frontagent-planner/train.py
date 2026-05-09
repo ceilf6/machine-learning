@@ -76,6 +76,7 @@ def main():
     parser.add_argument("--lr", type=float, default=LEARNING_RATE)
     parser.add_argument("--batch-size", type=int, default=BATCH_SIZE)
     parser.add_argument("--max-seq-len", type=int, default=MAX_SEQ_LENGTH)
+    parser.add_argument("--lora-rank", type=int, default=LORA_RANK, help="LoRA rank")
     args = parser.parse_args()
 
     output_dir = Path(args.output)
@@ -99,8 +100,8 @@ def main():
     # ── 3. 注入 LoRA ────────────────────────────────────
     model = FastLanguageModel.get_peft_model(
         model,
-        r=LORA_RANK,
-        lora_alpha=LORA_ALPHA,
+        r=args.lora_rank,
+        lora_alpha=args.lora_rank * 2,
         lora_dropout=0,  # Unsloth 建议设 0 加速
         target_modules=[
             "q_proj", "k_proj", "v_proj", "o_proj",
