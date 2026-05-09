@@ -242,8 +242,8 @@ def main():
         dtype=None,
         load_in_4bit=True,
     )
-    model.load_adapter(args.adapter, adapter_name="planner")
-    model.set_adapter("planner")
+    from peft import PeftModel
+    model = PeftModel.from_pretrained(model, args.adapter)
     tokenizer = get_chat_template(tokenizer, chat_template="chatml")
 
     # ── 可选: 加载基座模型做对比 ────────────────────────
