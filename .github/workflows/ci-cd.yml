@@ -58,7 +58,7 @@ jobs:
           git config --local user.name "GitHub Action"
 
           # First add and commit the model file on main branch
-          git add tasks/session-2/linear_model.txt tasks/session-2/linear_model.pkl
+          git add -f tasks/session-2/linear_model.txt tasks/session-2/linear_model.pkl
           git commit -m "Generate new model"
 
           # Create/checkout an orphan release branch (no history)
