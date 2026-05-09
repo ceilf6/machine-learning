@@ -34,7 +34,7 @@ language:
 
 ### Model Sources
 
-- **Repository:** https://github.com/ceilf6/machine-learning
+- **Repository:** https://github.com/ceilf6/FrontAgent
 - **基座模型:** https://huggingface.co/Qwen/Qwen2.5-Coder-7B
 
 ## Uses
