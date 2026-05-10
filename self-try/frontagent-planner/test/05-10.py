@@ -12,8 +12,8 @@ from llama_cpp import Llama
 
 # ─── 模型配置 ─────────────────────────────────────────────
 # Qwen2.5-Coder-7B 的 GGUF 量化版本
-GGUF_REPO = "Qwen/Qwen2.5-Coder-7B-GGUF"
-GGUF_FILE = "qwen2.5-coder-7b-q4_k_m.gguf"  # ~4.5GB, Mac 友好
+GGUF_REPO = "Qwen/Qwen2.5-Coder-7B-Instruct-GGUF"
+GGUF_FILE = "qwen2.5-coder-7b-instruct-q4_k_m.gguf"  # ~4.5GB, Mac 友好
 
 # LoRA adapter (需要转换为 llama.cpp 格式)
 # 如果未转换，会跳过 LoRA 加载，直接用基座模型测试
