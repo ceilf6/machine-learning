@@ -1,3 +1,6 @@
 [submodule "lundechen-machine_learning_2026_spring"]
 	path = lundechen-machine_learning_2026_spring
 	url = https://github.com/ceilf6/machine_learning_2026_spring
+[submodule "ocademy-ai-machine-learning"]
+	path = ocademy-ai-machine-learning
+	url = https://github.com/ceilf6/ocademy-ai-machine-learning
