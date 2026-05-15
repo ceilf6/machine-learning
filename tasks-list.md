@@ -25,7 +25,7 @@
 
 ## 05-15 课程任务
 
-- [ ] session-3-2. 完成 Simple ML Project with GitHub CI/CD -> Hugging Face；模型需使用 IMDB 情感分析神经网络（可用 `tiny_glove.json` embedding，或 BoW/TF-IDF 作为第一层），并把 GitHub URL 和 Hugging Face URL 发送到微信群
+- [x] session-3-2. 完成 Simple ML Project with GitHub CI/CD -> Hugging Face；模型使用 IMDB 情感分析 TF-IDF + MLP 神经网络，GitHub：<https://github.com/ceilf6/imdb-sentiment-mlp>，Hugging Face：<https://huggingface.co/ceilf6/imdb-sentiment-mlp>
 
 ## 最新课程仓库补充任务
 
