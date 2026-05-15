@@ -25,7 +25,9 @@
 
 ## 05-15 课程任务
 
-- [x] session-3-2. 完成 Simple ML Project with GitHub CI/CD -> Hugging Face；模型使用 IMDB 情感分析 TF-IDF + MLP 神经网络，GitHub：<https://github.com/ceilf6/imdb-sentiment-mlp>，Hugging Face：<https://huggingface.co/ceilf6/imdb-sentiment-mlp>
+- [x] session-3-2. 完成 Simple ML Project with GitHub CI/CD -> Hugging Face；
+    - GitHub：<https://github.com/ceilf6/imdb-sentiment-mlp>，Hugging Face：<https://huggingface.co/ceilf6/imdb-sentiment-mlp>
+    - 高质量版本使用 IMDB 情感分析 RoBERTa 神经网络，远端 CI 验证准确率 0.984（492/500，要求 >=0.92），GitHub：<https://github.com/ceilf6/imdb-sentiment-roberta>，Hugging Face：<https://huggingface.co/ceilf6/imdb-sentiment-roberta>
 
 ## 最新课程仓库补充任务
 
