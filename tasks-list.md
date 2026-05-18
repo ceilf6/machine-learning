@@ -29,6 +29,10 @@
     - GitHub：<https://github.com/ceilf6/imdb-sentiment-mlp>，Hugging Face：<https://huggingface.co/ceilf6/imdb-sentiment-mlp>
     - 高质量版本使用 IMDB 情感分析 RoBERTa 神经网络，远端 CI 验证准确率 0.984（492/500，要求 >=0.92），GitHub：<https://github.com/ceilf6/imdb-sentiment-roberta>，Hugging Face：<https://huggingface.co/ceilf6/imdb-sentiment-roberta>
 
+## 05-18 课程任务
+
+- [x] session-6-2. 在 Google Colab 或 Jupyter Notebook 完成 `code-stats-distributions-1.md` 中 Normal Distributions and Bivariate Normal Distributions 练习（无微信群提交要求，自动标记完成）
+
 ## 最新课程仓库补充任务
 
 - [ ] session-3-3. 完成 Pickling 练习：创建 GitHub 仓库，运行代码并上传代码与 pickle 文件，然后把 GitHub URL 发送到微信群
@@ -36,6 +40,8 @@
 - [x] session-1-2. 完成 Git/GitHub workflow 三个团队协作练习（无微信群提交要求，自动标记完成）
 - [x] session-2-8. 设置 GitHub SSH 认证（无微信群提交要求，自动标记完成）
 - [x] session-4-3. 完成 PyTest & TDD Python exercises，并配置 GitHub Actions 自动测试（无微信群提交要求，自动标记完成）
+- [x] session-4-4. 完成 Linear Regression from Scratch using TDD & PyTest，并配置 GitHub Actions 自动测试（无微信群提交要求，自动标记完成）
+- [x] session-4-5. 完成 Logistic Regression from Scratch using TDD & PyTest，并配置 GitHub Actions 自动测试（无微信群提交要求，自动标记完成）
 - [x] session-5-1. 跟随 `practice-debugging-my-nn.md` 调试 `practice-my_nn_with_bugs.py`（无微信群提交要求，自动标记完成）
 - [x] session-6-1. 完成 Python packaging 练习：将单文件神经网络脚本组织为 `simple_nn_utseus` 包（无微信群提交要求，自动标记完成）
 - [x] session-7-1. 完成 ReLU / Dropout / ELU / LeakyReLU 练习（无微信群提交要求，自动标记完成）
@@ -43,4 +49,4 @@
 - [x] session-400-5. 完成 Task 4：Logistic Regression for Sentiment Classification，并回答 BoW/TF-IDF 输入向量相关问题（无微信群提交要求，自动标记完成）
 - [x] session-400-6. 完成 Task 7：Orthogonal Projections for Debiasing（无微信群提交要求，自动标记完成）
 - [x] session-400-7. 完成 Task 11：Markov Chains for Text（无微信群提交要求，自动标记完成）
-- [x] session-400-8. 完成 Task 20：Simple Audio Recognition with MFCC，并探索 Random Forest 之外的模型（无微信群提交要求，自动标记完成）
+- [ ] session-400-8. 完成 Task 20：Simple Audio Recognition with MFCC，探索 Random Forest 之外的模型，并把 GitHub URL 发送到微信群
