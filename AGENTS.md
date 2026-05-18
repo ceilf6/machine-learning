@@ -13,7 +13,7 @@
 1. 不确定的问题一定要向用户提问。
 2. 每次开发或解析任务前，先同步课程子模块：
    1. 进入 `./lundechen-machine_learning_2026_spring/`，确认工作区状态；如果存在未提交改动、分支不明确或同步方式不确定，先向用户提问。
-   2. 从 `upstream` 上游仓库拉取最新情况，以最新的 `session-*` 资料作为任务来源基础。
+   2. 从 `upstream` 上游仓库 `https://github.com/reveurmichael/machine_learning_2026_spring` 拉取最新情况，以最新的 `session-*` 资料作为任务来源基础。
 3. 维护任务列表：
    1. 任务来源优先级以 `./lundechen-machine_learning_2026_spring/session-*/` 为准。
       `./notes/wechat-session/` 只作为课程子模块 session 任务的辅助信息，用于补充提交要求、时间、说明或群内答疑。
